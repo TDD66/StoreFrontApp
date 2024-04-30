@@ -164,6 +164,15 @@ DELETE a review
 - Open the project in the preferred IDE such as IntelliJ.
 - In the terminal, create the database called inventory_db by running the command createdb capstone_storefront_db.
 - Run the BackendProject file.
+  
+```properties
+spring_profiles_active=prod
+PROD_DB_HOST=roundhouse.proxy.rlwy.net
+PROD_DB_PORT=52849
+PROD_DB_NAME=railway
+PROD_DB_PASSWORD=BLVyjefZeJeACfjTGEnjffFjxQGTmVou
+PROD_DB_USERNAME=postgres
+```
 
 ### Frontend
 - Open the frontend project in the preferred code editor such as VS Code.
