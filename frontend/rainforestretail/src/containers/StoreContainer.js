@@ -26,37 +26,37 @@ const StoreContainer = () => {
     const [registerCustomer, setRegisterCustomer] = useState({});
 
     const fetchCustomers = async () => {
-        const response = await fetch('http://storefrontapp-production.up.railway.app/customers');
+        const response = await fetch('https://storefrontapp-production.up.railway.app/customers');
         const data = await response.json();
         setCustomers(data);
     }
 
     const fetchItems = async () => {
-        const response = await fetch('http://storefrontapp-production.up.railway.app/items');
+        const response = await fetch('https://storefrontapp-production.up.railway.app/items');
         const data = await response.json();
         setItems(data);
     }
 
     const fetchOrders = async () => {
-        const response = await fetch('http://storefrontapp-production.up.railway.app/orders');
+        const response = await fetch('https://storefrontapp-production.up.railway.app/orders');
         const data = await response.json();
         setOrders(data);
     }
 
     const fetchReviews = async () => {
-        const response = await fetch('http://storefrontapp-production.up.railway.app/reviews');
+        const response = await fetch('https://storefrontapp-production.up.railway.app/reviews');
         const data = await response.json();
         setReviews(data);
     }
 
     const fetchOrderedItems = async () => {
-        const response = await fetch('http://storefrontapp-production.up.railway.app/ordered-items');
+        const response = await fetch('https://storefrontapp-production.up.railway.app/ordered-items');
         const data = await response.json();
         setOrderedItems(data);
     }
 
     const postCustomer = async (newCustomer) => {
-        const response = await fetch("http://storefrontapp-production.up.railway.app/customers", {
+        const response = await fetch("https://storefrontapp-production.up.railway.app/customers", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newCustomer)
@@ -65,7 +65,7 @@ const StoreContainer = () => {
     }
 
     const postOrder = async (newOrder) => {
-        const response = await fetch("http://storefrontapp-production.up.railway.app/orders", {
+        const response = await fetch("https://storefrontapp-production.up.railway.app/orders", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newOrder)
@@ -76,7 +76,7 @@ const StoreContainer = () => {
     }
 
     const postOrderedItems = async (newOrderedItem) => {
-        const response = await fetch("http://storefrontapp-production.up.railway.app/ordered-items", {
+        const response = await fetch("https://storefrontapp-production.up.railway.app/ordered-items", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newOrderedItem)
@@ -86,7 +86,7 @@ const StoreContainer = () => {
     }
 
     const patchOrderedItems = async (newOrderedItem) => {
-        const response = await fetch("http://storefrontapp-production.up.railway.app/ordered-items", {
+        const response = await fetch("https://storefrontapp-production.up.railway.app/ordered-items", {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newOrderedItem)
@@ -96,7 +96,7 @@ const StoreContainer = () => {
     }
 
     const postReview = async (newReview) => {
-        const response = await fetch("http://storefrontapp-production.up.railway.app/reviews", {
+        const response = await fetch("https://storefrontapp-production.up.railway.app/reviews", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newReview)
@@ -105,7 +105,7 @@ const StoreContainer = () => {
     }
 
     const patchReview = async (amendedReview, reviewId) => {
-        const response = await fetch(`http://storefrontapp-production.up.railway.app/reviews/${reviewId}`, {
+        const response = await fetch(`https://storefrontapp-production.up.railway.app/reviews/${reviewId}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(amendedReview)
@@ -115,7 +115,7 @@ const StoreContainer = () => {
     }
 
     const deleteReview = async (reviewId) => {
-        const response = await fetch(`http://storefrontapp-production.up.railway.app/reviews/${reviewId}`, {
+        const response = await fetch(`https://storefrontapp-production.up.railway.app/reviews/${reviewId}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(reviewId)
@@ -145,7 +145,7 @@ const StoreContainer = () => {
 
         const newOrder = { customerId: customerId, address: address };
 
-        const newOrderResponse = await fetch("http://storefrontapp-production.up.railway.app/orders", {
+        const newOrderResponse = await fetch("https://storefrontapp-production.up.railway.app/orders", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newOrder)
@@ -161,7 +161,7 @@ const StoreContainer = () => {
                 orderQuantity: basketItem.orderQuantity
             };
 
-            const response = await fetch("http://storefrontapp-production.up.railway.app/ordered-items", {
+            const response = await fetch("https://storefrontapp-production.up.railway.app/ordered-items", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(orderedItem)
