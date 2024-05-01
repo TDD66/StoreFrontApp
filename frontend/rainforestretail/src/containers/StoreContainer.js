@@ -9,7 +9,7 @@ import BrowseItemsContainer from "./BrowseItemsContainer";
 import ShoppingCart from "./ShoppingCartContainer";
 import OrderList from "../components/OrderList";
 import YourOrder from "../components/YourOrder";
-const apiUrl = process.env.API_URL;
+const apiUrl = "storefrontapp-production.up.railway.app";
 
 export const userState = React.createContext();
 
