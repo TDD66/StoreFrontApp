@@ -26,6 +26,8 @@ const StoreContainer = () => {
     const [activeCustomer, setActiveCustomer] = useState({});
     const [registerCustomer, setRegisterCustomer] = useState({});
 
+    console.log(apiUrl);
+
     const fetchCustomers = async () => {
         const response = await fetch(`https://${apiUrl}/customers`);
         const data = await response.json();
